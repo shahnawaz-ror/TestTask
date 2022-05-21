@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1>User Rewards</h1>
+
+<table class="table responsive">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>User</th>
+      <th>Created Date</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reward_list.each do |reward_list| %>
+      <tr>
+        <td><%= reward_list.reward.title %></td>
+        <td><%= reward_list.user.fulle_name %></td>
+        <td><%= reward_list.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

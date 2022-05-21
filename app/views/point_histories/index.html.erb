@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Point Histories</h1>
+
+<table class="table responsive">
+  <thead>
+    <tr>
+      <th>Points Earned</th>
+      <th>Country(Location)</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @point_histories.each do |point_history| %>
+      <tr>
+        <td><%= point_history.earned %></td>
+        <td><%= point_history.location %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

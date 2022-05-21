@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreatePointHistories < ActiveRecord::Migration[6.1]
   def change
     create_table :point_histories do |t|

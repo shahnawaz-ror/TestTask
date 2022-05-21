@@ -2,7 +2,7 @@
 
 <h1>Users</h1>
 
-<table>
+<table class="table responsive">
   <thead>
     <tr>
       <th>Fulle name</th>
@@ -20,13 +20,10 @@
         <td><%= user.date_of_bith %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Show Transaction', user_transactions_path(user) %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show User Rewards', user_reward_reward_list_path(user) %> <%= link_to 'Show Point History', user_point_histories_path(user) %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New User', new_user_path %>

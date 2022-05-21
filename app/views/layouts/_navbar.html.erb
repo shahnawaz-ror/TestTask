@@ -1,15 +1,25 @@
 <div class="gradient-custom border">
 	<ul class="nav justify-content-center">
 		<li class="nav-item">
-			<%= link_to "TestTask", root_path, :class => "nav-link" %>
+			<%= link_to "Home", root_path, :class => "nav-link" %>
 		</li>
-		<li class="nav-item">
+			<li class="nav-item">
+			<%= link_to 'All Users', users_path, :class => "nav-link" %>
+</li>
 			<% if current_user.present? %>
-			<%#= link_to "Log Out", destroy_user_session_path, method: :delete,class: "nav-link" %>
-			<% else %>
-			<%= link_to "Log IN", new_user_session_path, method: :delete,class: "nav-link" %>
-			<% end%>
+		<li class="nav-item">
+			<%= link_to 'Show My Rewards', user_reward_reward_list_path(current_user), :class => "nav-link" %>
+</li>
+		<li class="nav-item">
+
+			<%= link_to 'Show My Point History', user_point_histories_path(current_user), :class => "nav-link" %>
 		</li>
+			<% else %>
+			<li class="nav-item">
+				
+			<%= link_to "Log IN", new_user_session_path, method: :delete,class: "nav-link" %>
+			</li>
+			<% end%>
 
 	</ul>
 </div>

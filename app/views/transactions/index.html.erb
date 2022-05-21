@@ -2,7 +2,7 @@
 
 <h1>Transactions</h1>
 
-<table>
+<table class="table responsive">
   <thead>
     <tr>
       <th>Initiate date</th>
@@ -21,7 +21,7 @@
         <td><%= transaction.latitude %></td>
         <td><%= transaction.longitude %></td>
         <td><%= transaction.price %></td>
-        <td><%= transaction.user_id %></td>
+        <td><%= transaction.user.fulle_name %> <%= link_to 'Show User Rewards', user_reward_reward_list_path(transaction.user) %> <%= link_to 'Show Point History', user_point_histories_path(transaction.user) %></td>
       </tr>
     <% end %>
   </tbody>
