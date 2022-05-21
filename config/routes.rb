@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  devise_for :users
+  get 'home/index'
   resources :users do
     resources :transactions
   end
-  devise_for :users
-  root 'users#index'
+  root 'home#index'
 end
