@@ -6,5 +6,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :transactions
-  validates_presence_of :fulle_name, :date_of_biths
+  validates_presence_of :fulle_name, :date_of_bith
 end
