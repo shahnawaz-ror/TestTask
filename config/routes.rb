@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   resources :users do
-  	resources :transactions
+    resources :transactions
   end
   devise_for :users
   root 'users#index'
