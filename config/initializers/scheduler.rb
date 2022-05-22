@@ -3,4 +3,5 @@
 scheduler = Rufus::Scheduler.new
 scheduler.in '2s' do
   CreateBadgeHistoryJob.perform_now
+  UpdatePointsJob.perform_now
 end
