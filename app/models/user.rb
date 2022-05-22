@@ -6,8 +6,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :transactions
-  has_many :points
+  has_many :point_histories
   has_many :user_rewards
+  has_many :badge_histories
   has_many :rewards, through: :user_rewards
   validates_presence_of :fulle_name, :date_of_bith
   def self.birthday_this_month(user_id)

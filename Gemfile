@@ -62,3 +62,4 @@ group :development, :test do
 end
 gem 'devise'
 gem 'geocoder'
+gem 'rufus-scheduler', '~> 3.8', '>= 3.8.1'

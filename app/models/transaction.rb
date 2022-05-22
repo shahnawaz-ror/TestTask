@@ -6,6 +6,10 @@ class Transaction < ApplicationRecord
   geocoded_by latitude: :latitude, longitude: :longitude
   validate :generate_points_based_on_location
 
+  scope :in_a_60_days, lambda { |user_id|
+                         where(created_at: Time.now.beginning_of_month..Time.now + 60.days, user_id: user_id)
+                       }
+
   def generate_points_based_on_location
     latitude = self.latitude
     longitude = self.longitude
