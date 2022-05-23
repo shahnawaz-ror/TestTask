@@ -6,6 +6,9 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+```bash
+ruby-3.0.0
+```
 
 * System dependencies
 
@@ -16,7 +19,12 @@ Things you may want to cover:
 * Database initialization
 
 * How to run the test suite
-
+```bash
+Demo URL
+https://sleepy-harbor-46418.herokuapp.com/
+Email: test@gmail.com
+Password: 123456
+```
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
